@@ -1,0 +1,196 @@
+// .gallery {
+//     @extend %section;
+
+//     @include sm-min {
+//         .container-fluid {
+//             padding-right: $gap / 3 * 5;
+//             padding-left: $gap / 3 * 5;
+//         }
+//     }
+
+//     &__title {
+//         @extend %section-title;
+//     }
+
+//     &__description {
+//         @extend %section-description;
+//     }
+// }
+
+// .gallery-item {
+//     @include sm-min {
+//         padding: 0 ($gap / 3) ($gap / 3 * 2);
+//     }
+
+//     @include sm {
+//         padding: 0 $gap $gap;
+//     }
+
+
+//     &__wrapper {
+//         position: relative;
+//         overflow: hidden;
+//         min-height: 200px;
+//         min-height: 33.33vh;
+//     }
+
+//     &__image {
+//         width: 100%;
+//         transition: transform 0.5s;
+//     }
+
+//     &__caption {
+//         @include abs-position;
+
+//         background-color: rgba($color-dark, 0.75);
+//         text-align: center;
+
+//         opacity: 0;
+
+//         transition: opacity 0.5s;
+        
+//     }
+
+//     &__title {
+//         position: absolute;
+//         left: $gap * 2;
+//         right: $gap * 2;
+//         bottom: -100%;
+//         transition: buttom 0.5s;
+//         color: $color-light;
+//         font-weight: bold;
+        
+//     }
+
+//     &__link {
+//         display: inline-flex;
+//         width: $gap * 3;
+//         height: $gap * 3;
+//         color: $color-light;
+//         background-color: $color-accent;
+//         align-items: center;
+//         justify-content: center;
+//         transform: translateY(-100px);
+//         transition: transform 0.5s;
+
+//         &:hover,
+//         &:focus {
+//             color: $color-light;
+//         }
+//     }
+
+//     &:hover {
+//         .gallary-item__image {
+//             transform: scale(1.8);
+//         }
+
+//         .gallary-item__caption {    
+//             opacity: 1;
+//         }
+
+//         .gallary-item__title {
+//             bottom: 15%;
+//         }
+
+//         .gallary-item__link {
+//             transform: translateY($gap * 3);
+//         }
+
+//     }
+// }
+
+
+
+.gallery {
+    @extend %section;
+  
+    @include sm-min {
+      .container-fluid {
+        padding-left: $gap / 3 * 5;
+        padding-right: $gap / 3 * 5;
+      }
+    }
+  
+    &__title {
+      @extend %section-title;
+    }
+  
+    &__description {
+      @extend %section-description;
+    }
+  }
+  
+  .gallery-item {
+    @include sm-min {
+      padding: 0 ($gap / 3) ($gap / 3 * 2);
+    }
+    @include sm {
+      padding: 0 $gap $gap;
+    }
+  
+    &__wrapper {
+      position: relative;
+      overflow: hidden;
+      min-height: 200px;
+      max-height: 33.33vh;
+    }
+  
+    &__image {
+      width: 100%;
+      transition: transform 0.5s;
+    }
+  
+    &__caption {
+      @include abs-position;
+  
+      background-color: rgba($color-dark, 0.75);
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+  
+    &__title {
+      position: absolute;
+      left: $gap * 2;
+      right: $gap * 2;
+      bottom: -100%;
+      transition: bottom 0.5s;
+      color: $color-light;
+      font-weight: bold;
+    }
+  
+    &__link {
+      display: inline-flex;
+      width: $gap * 3;
+      height: $gap * 3;
+      color: $color-light;
+      background-color: $color-accent;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-100px);
+      transition: transform 0.5s;
+  
+      &:hover,
+      &:focus {
+        color: $color-light;
+      }
+    }
+  
+    &:hover {
+      .gallery-item__image {
+        transform: scale(1.8);
+      }
+  
+      .gallery-item__caption {
+        opacity: 1;
+      }
+  
+      .gallery-item__title {
+        bottom: 15%;
+      }
+  
+      .gallery-item__link {
+        transform: translateY($gap * 3);
+      }
+    }
+  }

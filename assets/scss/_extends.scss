@@ -1,0 +1,164 @@
+%section {
+    display: flex;
+    min-height: 100vh;
+    align-content: center;
+    flex-wrap: wrap;
+
+    @extend %section-conten;
+}
+
+%section-conten {
+
+    @include lg-min {
+        padding-top: $gap * 7;
+        padding-bottom: $gap * 6;
+    }
+
+    @include lg-md {
+        padding-top: $gap * 7;
+        padding-bottom: $gap * 5;
+    }
+
+    @include md-sm {
+        padding-top: $gap * 6;
+        padding-bottom: $gap * 4;
+    }
+
+    @include sm {
+        padding-top: $gap * 6;
+        padding-bottom: $gap * 3;
+    }
+}
+
+
+%section-title {
+    text-align: center;
+
+    @include lg-min {
+        margin: 0 0 ($gap * 3);
+    }
+
+    @include lg-md {
+        margin: 0 0 ($gap * 2.5);
+    }
+
+    @include md-sm {
+        margin: 0 0 ($gap * 2);
+    }
+
+    @include sm {
+        margin: 0 0 ($gap * 1.5);
+    }
+}
+
+%section-description {
+
+    text-align: center;
+
+    @include md-min {
+        margin-bottom: $gap * 3;
+    }
+
+    @include md {
+        margin-bottom: $gap * 3;
+    }
+}
+
+%header {
+    color: $color-dark;
+    font-family: $font-main;
+}
+
+%link-border {
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 0;
+        opacity: 0;
+        background-color: $color-light;
+        @include lg-min {
+            left: 0;
+            width: 100%;
+        }
+
+        @include lg-min {
+            left: 25%;
+            width: 50%;
+        }
+    }
+}
+
+%link-border-active {
+    &::after {
+        height: 3px;
+        opacity: 1;
+        background-color: $color-accent; 
+
+        @include lg-min {
+            bottom: 10px;
+        }
+
+         @include lg {
+            bottom: 4px;
+        }
+
+    }
+}
+
+%link-border-not-active-on-hover {
+    
+    &:hover,
+    &focus {
+        .nav-link {
+            color: $color-light;
+
+            &::after {
+                height: 3px;
+                opacity: 1;
+                transition: bottom 0.5s, opacity 0.5s;
+                @include lg-min {
+                    bottom: 10px;
+                }
+
+                @include lg {
+                    bottom: 4px;
+                }
+            }
+        }
+    }
+}
+
+%back2top {
+    position: fixed;
+    right: $gap;
+    bottom: $gap;
+    display: none;
+    width: $gap * 3;
+    height: $gap * 3;
+    transition: opacity 0.3s;
+    opacity: 0.2;
+    background-color: $color-dark;
+    border-radius: 4px;
+
+    i {
+        position: relative;
+        top: $gap;
+        margin: 0;
+        transition: top 0.3s;
+        color: $color-light;
+        font-size: 1rem;
+    }
+
+    &:hover,
+    &:focus {
+
+        opacity: 1;
+
+        i {
+            top: 5px;
+        }
+    }
+}
+
+

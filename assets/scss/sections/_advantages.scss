@@ -1,0 +1,88 @@
+.advantages {
+    background-color: darken($color-light, 15%);
+
+    &__title {
+        @extend %section-title;
+    }
+
+    &__description {
+        @extend %section-description;
+    }
+
+    &__image {
+        min-height: 100vh;
+        background-position: 33% 50%;
+        background-size: cover;
+
+        @include lg {
+            display: none;
+        }
+    }
+
+    &__content {
+        @extend %section-conten;
+
+        @include xl-min {
+            >.row {
+                margin-left: $gap;
+                margin-right: $gap;
+            }
+        }
+
+        @include xl-lg {
+            >.row {
+                margin-left: 0;
+                margin-right: 0 ;
+            }
+        }
+
+        @include lg-min {
+            min-height: 100vh;
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    .container-fluid {
+        @include lg-md {
+            max-width: 720px;
+        }
+        @include md-sm {
+            max-width: 540px;
+        }
+    }
+
+
+}
+
+.advantage-item {
+
+    &__icon {
+        flex-grow: 0;
+
+        i {
+            margin-top: $gap / 2;
+            text-align: center;
+            color: $color-accent;
+
+            @include sm-min {
+                width: 60px;
+                font-size: 2.75rem;
+            }
+
+            @include sm {
+                width: 3px;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__caption {
+        margin-bottom: $gap;
+    }
+
+
+
+
+}

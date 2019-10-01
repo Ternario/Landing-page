@@ -1,0 +1,59 @@
+html {
+    font-size: $font-size;
+    font-family: $font-main;
+}
+
+body {
+    color: $color-gray;
+    font-family: $font-main;
+}
+
+section {
+    width: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    color: $color-light;
+    font-size: 1.75rem;
+    font-family: $font-main;
+}
+
+h2 {
+    @extend %header;
+}
+
+h3 {
+    @extend %header;
+}
+
+h4 {
+    @extend %header;
+}
+
+h5 {
+    font-size: 1.125rem;
+    @extend %header;
+}
+
+h6 {
+    @extend %header;
+}
+
+button:focus {
+    outline: none;
+}
+
+a {
+    color: $color-dark;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $color-accent;
+    }
+}
+
+.back2top {
+    @extend %back2top;
+}

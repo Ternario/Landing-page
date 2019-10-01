@@ -1,0 +1,15 @@
+.about {
+
+    @extend %section;
+
+
+    &__title {
+       
+        @extend %section-title;
+
+    }
+
+    &__item {
+        margin-bottom: $gap * 2;
+    }
+}
