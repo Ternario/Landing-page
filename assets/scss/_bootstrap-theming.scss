@@ -1,4 +1,4 @@
-.navbar-expend-lg {
+.navbar-expand-lg {
     @include lg-sm {
         > .container,
         > .container-fluid {
@@ -6,6 +6,7 @@
             padding-right: $gap;
         }
     }
+    
     .navbar-nav {
         .nav-item {
             padding-left: $gap / 2;
@@ -27,8 +28,8 @@
             content: "";
             position: absolute;
             bottom: 0;
-            height: 3px;
-            opacity: 1;
+            height: 0;
+            opacity: 0;
             background-color: $color-light;
             left: 0;
             width: 100%;

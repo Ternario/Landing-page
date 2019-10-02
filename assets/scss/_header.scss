@@ -3,6 +3,7 @@
 
     @include lg-min {
         padding: $gap 0;
+        background-color: transparent;
     }
 
     @include lg {

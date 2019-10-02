@@ -1,3 +1,8 @@
+%header {
+    color: $color-dark;
+    font-family: $font-main;
+}
+
 %section {
     display: flex;
     min-height: 100vh;
@@ -64,10 +69,7 @@
     }
 }
 
-%header {
-    color: $color-dark;
-    font-family: $font-main;
-}
+
 
 %link-border {
     &::after {
@@ -82,7 +84,7 @@
             width: 100%;
         }
 
-        @include lg-min {
+        @include lg {
             left: 25%;
             width: 50%;
         }
